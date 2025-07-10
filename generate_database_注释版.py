@@ -517,9 +517,7 @@ for data in data_terrain:  # 遍历所有动画文件
         # 截取当前步态周期（前后扩展window帧）
         slc = slice(int(curr[0])//2-window, int(next[0])//2-window+1)
         # 处理地形高度
-        H, Hmean = process_heights(anim[
-            int(curr[0])//2-window:
-            int(next[0])//2+window+1], type=type)
+        H, Hmean = process_heights(anim[int(curr[0])//2-window: int(next[0])//2+window+1], type=type)
 
         # 每个地形样本生成单独的数据
         for h, hmean in zip(H, Hmean):
